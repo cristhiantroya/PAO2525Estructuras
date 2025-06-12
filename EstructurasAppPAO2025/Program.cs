@@ -14,7 +14,7 @@ public class Program
 }
 
 
-class Program
+class Estudiante
 {
     static void Main(string[] args)
     {
