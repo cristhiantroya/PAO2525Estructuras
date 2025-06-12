@@ -1,69 +1,37 @@
-﻿using System;
-
-// La clase Circulo representa un círculo y permite calcular su área y perímetro
-public class Circulo
-{
-    // Variable privada que almacena el radio del círculo
-    private double radio;
-
-    // Constructor de la clase, recibe el radio como parámetro
-    public Circulo(double radio)
-    {
-        this.radio = radio;
-    }
-
-    // CalcularArea devuelve el área del círculo utilizando la fórmula: π * radio^2
-    public double CalcularArea()
-    {
-        return Math.PI * radio * radio;
-    }
-
-    // CalcularPerimetro devuelve el perímetro del círculo utilizando la fórmula: 2 * π * radio
-    public double CalcularPerimetro()
-    {
-        return 2 * Math.PI * radio;
-    }
-}
-
-// La clase Cuadrado representa un cuadrado y permite calcular su área y perímetro
-public class Cuadrado
-{
-    // Variable privada que almacena el lado del cuadrado
-    private double lado;
-
-    // Constructor de la clase, recibe el lado como parámetro
-    public Cuadrado(double lado)
-    {
-        this.lado = lado;
-    }
-
-    // CalcularArea devuelve el área del cuadrado utilizando la fórmula: lado * lado
-    public double CalcularArea()
-    {
-        return lado * lado;
-    }
-
-    // CalcularPerimetro devuelve el perímetro del cuadrado utilizando la fórmula: 4 * lado
-    public double CalcularPerimetro()
-    {
-        return 4 * lado;
-    }
-}
-
-// Clase principal con el método Main para ejecutar el programa
-public class Programa
+﻿
+public class Program
 {
     public static void Main()
     {
-        // Crear un círculo con radio 5
         Circulo circulo = new Circulo(5);
         Console.WriteLine("Área del círculo: " + circulo.CalcularArea());
         Console.WriteLine("Perímetro del círculo: " + circulo.CalcularPerimetro());
 
-        // Crear un cuadrado con lado 4
         Cuadrado cuadrado = new Cuadrado(4);
         Console.WriteLine("Área del cuadrado: " + cuadrado.CalcularArea());
         Console.WriteLine("Perímetro del cuadrado: " + cuadrado.CalcularPerimetro());
     }
 }
 
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 1. Crear estudiante (igual que crear Asignatura)
+        string[] telefonosAna = { "0991234567", "022987654", "042111222" };
+        Estudiante estudiante1 = new Estudiante(101, "Ana María", "García Pérez", "Calle Principal 456", telefonosAna);
+
+        // 2. Acceder a los datos (usando los métodos get)
+        Console.WriteLine("=== DATOS DEL ESTUDIANTE ===");
+        Console.WriteLine($"ID: {estudiante1.getId()}");
+        Console.WriteLine($"Nombre: {estudiante1.getNombres()} {estudiante1.getApellidos()}");
+        Console.WriteLine($"Dirección: {estudiante1.getDireccion()}");
+
+        Console.WriteLine("\nTeléfonos:");
+        string[] tels = estudiante1.getTelefonos();
+        for (int i = 0; i < tels.Length; i++) {
+            Console.WriteLine($"{i+1}. {tels[i]}");
+        }
+    }
+}
