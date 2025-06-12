@@ -1,4 +1,4 @@
-public class Estudiante  // Definición de la clase Estudiante
+public class Estudiante  // Definición de la clase estudiante
 {
     // Campos privados 
     private int id;
@@ -19,23 +19,28 @@ public class Estudiante  // Definición de la clase Estudiante
 
     // Métodos públicos que permiten acceder a los valores privados del estudiante
 
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public string getNombres() {
+    public string getNombres()
+    {
         return nombres;
     }
 
-    public string getApellidos() {
+    public string getApellidos()
+    {
         return apellidos;
     }
 
-    public string getDireccion() {
+    public string getDireccion()
+    {
         return direccion;
     }
 
-    public string[] getTelefonos() {
+    public string[] getTelefonos()
+    {
         return telefonos;
     }
 }
