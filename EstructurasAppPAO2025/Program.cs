@@ -1,4 +1,22 @@
 ﻿
+class Program
+{
+    static void Main()
+    {
+        AgendaTelefonica miAgenda = new AgendaTelefonica();
+
+        miAgenda.AgregarContacto("Jeeferson Pérez", "095623584");
+        miAgenda.AgregarContacto("María García", "0934567890");
+
+        miAgenda.MostrarContactos();
+
+        miAgenda.BuscarContacto("Jefferson Pérez");
+
+        miAgenda.EliminarContacto("María García");
+
+        miAgenda.MostrarContactos();
+    }
+}
 
 
 
