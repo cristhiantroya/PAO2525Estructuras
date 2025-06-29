@@ -7,7 +7,18 @@ Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerN
 Console.WriteLine("Ejercicio 2");
 Console.WriteLine("Abecedario filtrado: " + new Abecedario().Filtrar());
 
+//ejercicio 3
+Console.WriteLine("Ejercicio 3");
+var miCurso = new Curso();
+var listaAsignaturas = miCurso.ObtenerAsignaturas();
 
+Console.WriteLine("Asignaturas del curso:");
+foreach (var asignatura in listaAsignaturas)
+{
+    Console.WriteLine($"- {asignatura}");
+}
+
+Console.WriteLine($"Total de asignaturas: {listaAsignaturas.Count}");
 
 
 
