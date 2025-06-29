@@ -20,6 +20,23 @@ foreach (var asignatura in listaAsignaturas)
 
 Console.WriteLine($"Total de asignaturas: {listaAsignaturas.Count}");
 
+//ejercicio 4
+Console.WriteLine("Ejercicio 4");
+System.Console.WriteLine("Ingrese una palabra:");
+string entrada = System.Console.ReadLine();
+
+Palindromo p = new Palindromo();
+
+if (p.EsPalindromo(entrada))
+{
+    System.Console.WriteLine($"La palabra \"{entrada}\" es un palíndromo.");
+}
+else
+{
+    System.Console.WriteLine($"La palabra \"{entrada}\" NO es un palíndromo.");
+}
+
+
 
 
 
