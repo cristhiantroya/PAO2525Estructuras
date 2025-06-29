@@ -9,4 +9,13 @@ class Abecedario
         'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's',
         't', 'u', 'v', 'w', 'x', 'y', 'z'
     };
+ public string Filtrar()
+    {
+        for (int i = letras.Count - 1; i >= 0; i--)
+        {
+            if ((i + 1) % 3 == 0) letras.RemoveAt(i);
+        }
+        
+        return string.Join(", ", letras);
+    }
 }
