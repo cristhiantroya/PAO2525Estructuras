@@ -36,6 +36,11 @@ else
     System.Console.WriteLine($"La palabra \"{entrada}\" NO es un palíndromo.");
 }
 
+//ejercicio 5
+Console.WriteLine("Ejercicio 5");
+var precios = new Precios();
+Console.WriteLine($"El precio mayor es: {precios.ObtenerMayor()}");
+Console.WriteLine($"El precio menor es: {precios.ObtenerMenor()}");
 
 
 
