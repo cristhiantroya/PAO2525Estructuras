@@ -1,8 +1,11 @@
 ﻿//ejercicio 1 
+Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
+Console.WriteLine("Ejercicio 1");
 Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerNumerosInversos());  
 
-
-
+//ejercicio 2 
+Console.WriteLine("Ejercicio 2");
+Console.WriteLine("Abecedario filtrado: " + new Abecedario().Filtrar());
 
 
 
