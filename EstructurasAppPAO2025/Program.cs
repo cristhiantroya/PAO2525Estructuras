@@ -1,4 +1,5 @@
-﻿
+﻿//ejercicio 1 
+Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerNumerosInversos());  
 
 
 
