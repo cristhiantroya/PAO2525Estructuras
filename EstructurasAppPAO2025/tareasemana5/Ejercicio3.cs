@@ -10,4 +10,9 @@ class Curso
         "Historia",
         "Lengua"
     };
+     public List<string> ObtenerAsignaturas()
+    {
+        return asignaturas;
+    }
 }
+
