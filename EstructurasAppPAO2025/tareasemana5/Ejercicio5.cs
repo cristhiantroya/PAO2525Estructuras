@@ -14,5 +14,13 @@ class Precios
         }
         return mayor;
     }
-    
+     public int ObtenerMenor()
+    {
+        int menor = precios[0];
+        foreach (int precio in precios)
+        {
+            if (precio < menor) menor = precio;
+        }
+        return menor;
     }
+}
