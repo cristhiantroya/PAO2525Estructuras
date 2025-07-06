@@ -26,4 +26,47 @@ public class ListaSimple
             actual.Next = nuevoNodo;
         }
     }
+ public void DibujarLista()
+    {
+        Nodo? actual = head;
+        Console.Write("head -->");
+        while (actual != null)
+        {
+            Console.Write($" [ {actual.Data} | * ]");
+            if (actual.Next != null)
+                Console.Write(" -->");
+            actual = actual.Next;
+        }
+        Console.WriteLine(" --> null");
+    }
+
+    public void EliminarFueraDeRango(int min, int max)
+    {
+        Nodo? actual = head;
+        Nodo? anterior = null;
+
+        while (actual != null)
+        {
+            if (actual.Data < min || actual.Data > max)
+            {
+                if (anterior == null)
+                {
+                    // El nodo a eliminar es el primero
+                    head = actual.Next;
+                    actual = head;
+                }
+                else
+                {
+                    // Nodo en medio o final
+                    anterior.Next = actual.Next;
+                    actual = anterior.Next;
+                }
+            }
+            else
+            {
+                anterior = actual;
+                actual = actual.Next;
+            }
+        }
+    }
 }
