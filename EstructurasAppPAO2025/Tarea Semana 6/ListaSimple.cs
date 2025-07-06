@@ -45,7 +45,7 @@ public class ListaSimple
                 System.Console.Write(" -->");
             actual = actual.Next;
         }
-        System.Console.Write(" --> null\n");
+        System.Console.Write(" --> null \n");
     }
     
 }
