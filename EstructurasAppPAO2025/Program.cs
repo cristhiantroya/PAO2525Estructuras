@@ -1,46 +1,46 @@
-﻿//ejercicio 1 
-Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
-Console.WriteLine("Ejercicio 1");
-Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerNumerosInversos());  
+﻿// //ejercicio 1 
+// Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
+// Console.WriteLine("Ejercicio 1");
+// Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerNumerosInversos());  
 
-//ejercicio 2 
-Console.WriteLine("Ejercicio 2");
-Console.WriteLine("Abecedario filtrado: " + new Abecedario().Filtrar());
+// //ejercicio 2 
+// Console.WriteLine("Ejercicio 2");
+// Console.WriteLine("Abecedario filtrado: " + new Abecedario().Filtrar());
 
-//ejercicio 3
-Console.WriteLine("Ejercicio 3");
-var miCurso = new Curso();
-var listaAsignaturas = miCurso.ObtenerAsignaturas();
+// //ejercicio 3
+// Console.WriteLine("Ejercicio 3");
+// var miCurso = new Curso();
+// var listaAsignaturas = miCurso.ObtenerAsignaturas();
 
-Console.WriteLine("Asignaturas del curso:");
-foreach (var asignatura in listaAsignaturas)
-{
-    Console.WriteLine($"- {asignatura}");
-}
+// Console.WriteLine("Asignaturas del curso:");
+// foreach (var asignatura in listaAsignaturas)
+// {
+//     Console.WriteLine($"- {asignatura}");
+// }
 
-Console.WriteLine($"Total de asignaturas: {listaAsignaturas.Count}");
+// Console.WriteLine($"Total de asignaturas: {listaAsignaturas.Count}");
 
-//ejercicio 4
-Console.WriteLine("Ejercicio 4");
-System.Console.WriteLine("Ingrese una palabra:");
-string entrada = System.Console.ReadLine();
+// //ejercicio 4
+// Console.WriteLine("Ejercicio 4");
+// System.Console.WriteLine("Ingrese una palabra:");
+// string entrada = System.Console.ReadLine();
 
-Palindromo p = new Palindromo();
+// Palindromo p = new Palindromo();
 
-if (p.EsPalindromo(entrada))
-{
-    System.Console.WriteLine($"La palabra \"{entrada}\" es un palíndromo.");
-}
-else
-{
-    System.Console.WriteLine($"La palabra \"{entrada}\" NO es un palíndromo.");
-}
+// if (p.EsPalindromo(entrada))
+// {
+//     System.Console.WriteLine($"La palabra \"{entrada}\" es un palíndromo.");
+// }
+// else
+// {
+//     System.Console.WriteLine($"La palabra \"{entrada}\" NO es un palíndromo.");
+// }
 
-//ejercicio 5
-Console.WriteLine("Ejercicio 5");
-var precios = new Precios();
-Console.WriteLine($"El precio mayor es: {precios.ObtenerMayor()}");
-Console.WriteLine($"El precio menor es: {precios.ObtenerMenor()}");
+// //ejercicio 5
+// Console.WriteLine("Ejercicio 5");
+// var precios = new Precios();
+// Console.WriteLine($"El precio mayor es: {precios.ObtenerMayor()}");
+// Console.WriteLine($"El precio menor es: {precios.ObtenerMenor()}");
 
 
 
