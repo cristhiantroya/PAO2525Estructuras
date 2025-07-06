@@ -1,4 +1,57 @@
-﻿// //ejercicio 1 
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        ListaSimple lista = new ListaSimple();
+        lista.InsertarFinal(10);
+        lista.InsertarFinal(20);
+        lista.InsertarFinal(30);
+
+        System.Console.WriteLine("Lista original:");
+        lista.DibujarLista();
+
+        lista.Invertir();
+
+        System.Console.WriteLine("\nLista invertida:");
+        lista.DibujarLista();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //ejercicio 1 
 // Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
 // Console.WriteLine("Ejercicio 1");
 // Console.WriteLine("Números en orden inverso: " + new NumerosInversos().ObtenerNumerosInversos());  
