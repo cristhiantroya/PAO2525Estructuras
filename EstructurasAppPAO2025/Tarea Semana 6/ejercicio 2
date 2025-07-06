@@ -4,4 +4,27 @@ public class Nodo
     public Nodo? Next;
     public Nodo(int data) => (Data, Next) = (data, null);
 }
+public class ListaSimple
+{
+    private Nodo? head;
+    private readonly Random random = new Random();
 
+
+    static ListaSimple()
+    {
+        ListaSimple lista = new ListaSimple();
+
+       
+        lista.GenerarNumerosAleatorios();
+        System.Console.WriteLine("=== Lista original ===");
+        lista.DibujarLista();
+
+        int min = 100;
+        int max = 200;
+        System.Console.WriteLine($"\nFiltrando entre {min} y {max}...");
+
+        lista.EliminarFueraDeRango(min, max);
+        System.Console.WriteLine("\n=== Lista filtrada ===");
+        lista.DibujarLista();
+    }
+}
