@@ -47,19 +47,5 @@ public class ListaSimple
         }
         System.Console.Write(" --> null\n");
     }
-     static ListaSimple()
-    {
-        ListaSimple lista = new ListaSimple();
-        lista.InsertarFinal(10);
-        lista.InsertarFinal(20);
-        lista.InsertarFinal(30);
-
-        System.Console.WriteLine("Lista original:");
-        lista.DibujarLista();
-
-        lista.Invertir();
-
-        System.Console.WriteLine("\nLista invertida:");
-        lista.DibujarLista();
-    }
+    
 }
