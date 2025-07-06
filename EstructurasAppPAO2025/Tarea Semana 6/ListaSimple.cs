@@ -21,4 +21,17 @@ public class ListaSimple
         }
         head = prev;
     }
+ public void InsertarFinal(int dato)
+    {
+        Nodo nuevoNodo = new Nodo(dato);
+        if (head == null)
+            head = nuevoNodo;
+        else
+        {
+            Nodo actual = head;
+            while (actual.Next != null)
+                actual = actual.Next;
+            actual.Next = nuevoNodo;
+        }
+    }
 }
