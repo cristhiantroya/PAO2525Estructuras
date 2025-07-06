@@ -1,4 +1,6 @@
-﻿class Program
+﻿//ejercico1 
+
+class Program
 {
     static void Main(string[] args)
     {
@@ -16,7 +18,6 @@
         lista.DibujarLista();
     }
 }
-
 
 
 
