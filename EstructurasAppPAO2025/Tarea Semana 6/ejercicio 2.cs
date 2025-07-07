@@ -66,7 +66,7 @@ public class ListaSimple
         }
     }
 
-    private void DibujarLista()
+    public void DibujarLista()
     {
         Nodo? actual = head;
         System.Console.Write("head -->");

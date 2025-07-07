@@ -1,21 +1,29 @@
-﻿//ejercico1 
-
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
-        ListaSimple lista = new ListaSimple();
-        lista.InsertarFinal(10);
-        lista.InsertarFinal(20);
-        lista.InsertarFinal(30);
+        // Ejecutar ejercicio 1
+        Console.WriteLine("Ejercicio 1");
+        var listaInvertir = new ListaSimpleInvertir();
+        listaInvertir.InsertarFinal(1);
+        listaInvertir.InsertarFinal(2);
+        listaInvertir.InsertarFinal(3);
+        listaInvertir.DibujarLista();
+        listaInvertir.Invertir();
+        listaInvertir.DibujarLista();
 
-        System.Console.WriteLine("Lista original:");
-        lista.DibujarLista();
+        // Ejecutar ejercicio 2
+        Console.WriteLine("Ejercicio 2");
+        var listaFiltrar = new ListaSimple();
+        listaFiltrar.GenerarNumerosAleatorios();
+        System.Console.WriteLine("=== Lista original ===");
+        listaFiltrar.DibujarLista();
 
-        lista.Invertir();
-
-        System.Console.WriteLine("\nLista invertida:");
-        lista.DibujarLista();
+        int min = 100, max = 200;
+        System.Console.WriteLine($"\nFiltrando entre {min} y {max}...");
+        listaFiltrar.EliminarFueraDeRango(min, max);
+        System.Console.WriteLine("\n=== Lista filtrada ===");
+        listaFiltrar.DibujarLista();
     }
 }
 

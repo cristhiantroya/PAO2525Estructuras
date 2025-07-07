@@ -1,9 +1,9 @@
-public class Nodo
+public class NodoInvertir
 {
     public int Data;
-    public Nodo? Next;
-    
-    public Nodo(int data)
+    public NodoInvertir? Next;
+
+    public NodoInvertir(int data)
     {
         Data = data;
         Next = null;
