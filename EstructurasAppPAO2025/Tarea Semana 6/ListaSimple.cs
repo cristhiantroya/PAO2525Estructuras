@@ -21,7 +21,7 @@ public class ListaSimple
         }
         head = prev;
     }
- public void InsertarFinal(int dato)
+    public void InsertarFinal(int dato)
     {
         Nodo nuevoNodo = new Nodo(dato);
         if (head == null)
@@ -34,7 +34,7 @@ public class ListaSimple
             actual.Next = nuevoNodo;
         }
     }
- public void DibujarLista()
+    public void DibujarLista()
     {
         Nodo? actual = head;
         System.Console.Write("head -->");
@@ -47,5 +47,5 @@ public class ListaSimple
         }
         System.Console.Write(" --> null \n");
     }
-    
+
 }
