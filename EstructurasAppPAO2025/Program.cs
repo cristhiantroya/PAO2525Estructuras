@@ -1,31 +1,80 @@
-﻿class Program
-{
-    static void Main(string[] args)
-    {
-        // Ejecutar ejercicio 1
-        Console.WriteLine("Ejercicio 1");
-        var listaInvertir = new ListaSimpleInvertir();
-        listaInvertir.InsertarFinal(1);
-        listaInvertir.InsertarFinal(2);
-        listaInvertir.InsertarFinal(3);
-        listaInvertir.DibujarLista();
-        listaInvertir.Invertir();
-        listaInvertir.DibujarLista();
+﻿string expresion = "{7 + (8 * 5) - [(9 - 7) + (4 + 1)]}";
+bool balanceada = Ejercicio1.VerificarBalance(expresion);
+Console.WriteLine(balanceada ? "Fórmula balanceada." : "Fórmula NO balanceada.");
 
-        // Ejecutar ejercicio 2
-        Console.WriteLine("Ejercicio 2");
-        var listaFiltrar = new ListaSimple();
-        listaFiltrar.GenerarNumerosAleatorios();
-        System.Console.WriteLine("=== Lista original ===");
-        listaFiltrar.DibujarLista();
 
-        int min = 100, max = 200;
-        System.Console.WriteLine($"\nFiltrando entre {min} y {max}...");
-        listaFiltrar.EliminarFueraDeRango(min, max);
-        System.Console.WriteLine("\n=== Lista filtrada ===");
-        listaFiltrar.DibujarLista();
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         // Ejecutar ejercicio 1
+//         Console.WriteLine("Ejercicio 1");
+//         var listaInvertir = new ListaSimpleInvertir();
+//         listaInvertir.InsertarFinal(1);
+//         listaInvertir.InsertarFinal(2);
+//         listaInvertir.InsertarFinal(3);
+//         listaInvertir.DibujarLista();
+//         listaInvertir.Invertir();
+//         listaInvertir.DibujarLista();
+
+//         // Ejecutar ejercicio 2
+//         Console.WriteLine("Ejercicio 2");
+//         var listaFiltrar = new ListaSimple();
+//         listaFiltrar.GenerarNumerosAleatorios();
+//         System.Console.WriteLine("=== Lista original ===");
+//         listaFiltrar.DibujarLista();
+
+//         int min = 100, max = 200;
+//         System.Console.WriteLine($"\nFiltrando entre {min} y {max}...");
+//         listaFiltrar.EliminarFueraDeRango(min, max);
+//         System.Console.WriteLine("\n=== Lista filtrada ===");
+//         listaFiltrar.DibujarLista();
+//     }
+// }
 
 
 
