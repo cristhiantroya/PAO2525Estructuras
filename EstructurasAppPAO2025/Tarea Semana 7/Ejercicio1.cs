@@ -3,9 +3,9 @@ class Ejercicio1
     public static bool VerificarBalance(string expresion) // Método principal que verifica el balance de símbolos de apertura y cierre.
     {
         Stack<char> pila = new Stack<char>(); //Pila para controlar símbolos de apertura.
-        foreach (char caracter in expresion)
+        foreach (char caracter in expresion) // Recorre cada carácter de la expresión.
         {
-            if (esApertura(caracter)) // Recorre cada carácter de la expresión.
+            if (esApertura(caracter)) 
             {
                 pila.Push(caracter);
             }
