@@ -1,8 +1,12 @@
-﻿string expresion = "{7 + (8 * 5) - [(9 - 7) + (4 + 1)]}";
+﻿Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
+Console.WriteLine("Ejercicio 1");
+string expresion = "{7 + (8 * 5) - [(9 - 7) + (4 + 1)]}";
 bool balanceada = Ejercicio1.VerificarBalance(expresion);
 Console.WriteLine(balanceada ? "Fórmula balanceada." : "Fórmula NO balanceada.");
+Console.WriteLine("==============================================================");
 
-
+Console.WriteLine("Ejercicio 2");
+Ejercicio2.ResolverHanoi(3);  // Llama al método ResolverHanoi del ejercicio 2 para resolver el problema de las Torres de Hanoi con 3 discos.
 
 
 
