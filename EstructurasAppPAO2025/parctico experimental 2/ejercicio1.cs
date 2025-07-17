@@ -9,3 +9,11 @@ public class Persona
     }
      
      }
+public class SistemaAtraccion
+{
+    private Queue<Persona> colaEspera = new Queue<Persona>(); // Cola para manejar el orden de llegada 
+    private List<Persona> asientosAsignados = new List<Persona>(); // Lista para registrar los asientos asignados
+    private const int CAPACIDAD = 30;
+     
+
+    }
