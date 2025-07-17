@@ -27,8 +27,22 @@ public class SistemaAtraccion
         Console.WriteLine("\n--- ASIENTOS ASIGNADOS ---");
         for (int i = 0; i < asientosAsignados.Count; i++) // Recorremos la lista de asientos asignados
         {
-             Console.WriteLine($"Asiento {i+1}: {asientosAsignados[i].Nombre} (Turno {asientosAsignados[i].NumeroTurno})");
+            Console.WriteLine($"Asiento {i + 1}: {asientosAsignados[i].Nombre} (Turno {asientosAsignados[i].NumeroTurno})");
+        }
+    }
+    // Método para agregar una nueva persona a la cola
+    public void AgregarALaCola(string nombre, int turno)
+    {
+        if (asientosAsignados.Count < CAPACIDAD)
+        {
+            colaEspera.Enqueue(new Persona(nombre, turno));
+            Console.WriteLine($"{nombre} agregado/a a la cola (Turno {turno})");
+        }
+        else
+        {
+            Console.WriteLine("Capacidad máxima alcanzada");
         }
     }
     }
+    
     
