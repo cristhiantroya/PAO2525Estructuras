@@ -1,25 +1,23 @@
-﻿public class Program
-{
-    public void Ejecutar()
-    {
-        SistemaAtraccion atraccion = new SistemaAtraccion();
-        Console.WriteLine("=== SISTEMA DE ASIGNACIÓN DE ASIENTOS ===");
-        Console.WriteLine("Simulando llegada de 30 visitantes...\n");
+﻿SistemaAtraccion atraccion = new SistemaAtraccion();
+System.Console.WriteLine("=== SISTEMA DE ASIGNACIÓN DE ASIENTOS ===");
+System.Console.WriteLine("Simulando llegada de 30 visitantes...\n");
 
-        for (int i = 1; i <= 30; i++)
-        {
-            atraccion.AgregarALaCola($"Visitante-{i}", i);
-        }
-        Console.WriteLine("\nEstado inicial:");
-        atraccion.MostrarCola();
-        Console.WriteLine("\nIniciando asignación de asientos...");
-        atraccion.AsignarAsientos();
-        Console.WriteLine("\nResultado final de asignación:");
-        atraccion.MostrarAsientos();
-         Console.WriteLine("\nProceso completado exitosamente");
-    }
+for (int i = 1; i <= 30; i++)
+{
+    atraccion.AgregarALaCola($"Visitante-{i}", i);
 }
-        
+
+System.Console.WriteLine("\nEstado inicial:");
+atraccion.MostrarCola();
+
+System.Console.WriteLine("\nIniciando asignación de asientos...");
+atraccion.AsignarAsientos();
+
+System.Console.WriteLine("\nResultado final de asignación:");
+atraccion.MostrarAsientos();
+
+System.Console.WriteLine("\nProceso completado exitosamente");
+
 
 
 
