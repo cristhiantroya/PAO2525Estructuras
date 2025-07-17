@@ -43,6 +43,17 @@ public class SistemaAtraccion
             Console.WriteLine("Capacidad máxima alcanzada");
         }
     }
+    //Método principal para asignar los asientos
+    public void AsignarAsientos()
+    {
+        Console.WriteLine("\nASIGNANDO ASIENTOS...");
+        while (asientosAsignados.Count < CAPACIDAD && colaEspera.Count > 0)
+        {
+            var persona = colaEspera.Dequeue();
+            asientosAsignados.Add(persona);
+            Console.WriteLine($"Asiento {asientosAsignados.Count} asignado a {persona.Nombre}");
+        }
     }
+}
     
     
