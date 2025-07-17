@@ -8,9 +8,19 @@
 
         for (int i = 1; i <= 30; i++)
         {
+            atraccion.AgregarALaCola($"Visitante-{i}", i);
         }
+        Console.WriteLine("\nEstado inicial:");
+        atraccion.MostrarCola();
+        Console.WriteLine("\nIniciando asignación de asientos...");
+        atraccion.AsignarAsientos();
+        Console.WriteLine("\nResultado final de asignación:");
+        atraccion.MostrarAsientos();
+         Console.WriteLine("\nProceso completado exitosamente");
     }
 }
+        
+
 
 
 
