@@ -2,7 +2,13 @@
 {
     public void Ejecutar()
     {
+        SistemaAtraccion atraccion = new SistemaAtraccion();
+        Console.WriteLine("=== SISTEMA DE ASIGNACIÓN DE ASIENTOS ===");
+        Console.WriteLine("Simulando llegada de 30 visitantes...\n");
 
+        for (int i = 1; i <= 30; i++)
+        {
+        }
     }
 }
 
