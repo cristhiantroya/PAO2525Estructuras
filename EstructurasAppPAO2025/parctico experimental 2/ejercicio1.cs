@@ -14,6 +14,13 @@ public class SistemaAtraccion
     private Queue<Persona> colaEspera = new Queue<Persona>(); // Cola para manejar el orden de llegada 
     private List<Persona> asientosAsignados = new List<Persona>(); // Lista para registrar los asientos asignados
     private const int CAPACIDAD = 30;
-     
-
+      public void MostrarCola()  
+    {
+        Console.WriteLine("\n--- PERSONAS EN COLA ---");
+        foreach (var persona in colaEspera) // Recorrer cada persona en la cola
+        {
+            Console.WriteLine($"Turno {persona.NumeroTurno}: {persona.Nombre}");
+        }
     }
+    }
+    
