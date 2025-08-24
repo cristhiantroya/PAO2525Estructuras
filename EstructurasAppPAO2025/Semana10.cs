@@ -23,3 +23,11 @@ public class vacunas
             int id = random.Next(1, 501);
             astrazeneca.Add("Ciudadano " + id);
         }
+// Ciudadanos que no se han vacunado
+ HashSet<string> noVacunados = new HashSet<string>();
+        noVacunados.UnionWith(todosCiudadanos);
+        noVacunados.ExceptWith(pfizer);
+        noVacunados.ExceptWith(astrazeneca);
+        
+        Console.WriteLine("Ciudadanos no vacunados: " + noVacunados.Count);
+        
