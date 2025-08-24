@@ -9,4 +9,11 @@ public class vacunas
         }
 
         Random random = new Random();
+         // Crear conjunto de 75 vacunados con Pfizer
+        HashSet<string> pfizer = new HashSet<string>();
+        while (pfizer.Count < 75)
+        {
+            int id = random.Next(1, 501);
+            pfizer.Add("Ciudadano " + id);
+        }
 }
