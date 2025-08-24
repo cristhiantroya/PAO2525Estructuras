@@ -30,27 +30,46 @@ public class Vacunas
         noVacunados.ExceptWith(pfizer);
         noVacunados.ExceptWith(astrazeneca);
         
-        Console.WriteLine("Ciudadanos no vacunados: " + noVacunados.Count);
-
+        Console.WriteLine("=== CIUDADANOS NO VACUNADOS (" + noVacunados.Count + ") ===");
+        foreach (var ciudadano in noVacunados)
+        {
+            Console.WriteLine(ciudadano);
+        }
+        Console.WriteLine();
+        
         // Ciudadanos que han recibido ambas dosis
-HashSet<string> ambasDosis = new HashSet<string>();
+        HashSet<string> ambasDosis = new HashSet<string>();
         ambasDosis.UnionWith(pfizer);
         ambasDosis.IntersectWith(astrazeneca);
 
-        Console.WriteLine("Ciudadanos con ambas dosis: " + ambasDosis.Count);
+        Console.WriteLine("=== CIUDADANOS CON AMBAS DOSIS (" + ambasDosis.Count + ") ===");
+        foreach (var ciudadano in ambasDosis)
+        {
+            Console.WriteLine(ciudadano);
+        }
+        Console.WriteLine();
 
         // Ciudadanos que solo han recibido Pfizer
         HashSet<string> soloPfizer = new HashSet<string>();
         soloPfizer.UnionWith(pfizer);
         soloPfizer.ExceptWith(astrazeneca);
         
-        Console.WriteLine("Ciudadanos solo con Pfizer: " + soloPfizer.Count);
+        Console.WriteLine("=== CIUDADANOS SOLO CON PFIZER (" + soloPfizer.Count + ") ===");
+        foreach (var ciudadano in soloPfizer)
+        {
+            Console.WriteLine(ciudadano);
+        }
+        Console.WriteLine();
 
         // Ciudadanos que solo han recibido AstraZeneca
         HashSet<string> soloAstrazeneca = new HashSet<string>();
         soloAstrazeneca.UnionWith(astrazeneca);
         soloAstrazeneca.ExceptWith(pfizer);
         
-        Console.WriteLine("Ciudadanos solo con AstraZeneca: " + soloAstrazeneca.Count);
+        Console.WriteLine("=== CIUDADANOS SOLO CON ASTRAZENECA (" + soloAstrazeneca.Count + ") ===");
+        foreach (var ciudadano in soloAstrazeneca)
+        {
+            Console.WriteLine(ciudadano);
+        }
     }
 }
