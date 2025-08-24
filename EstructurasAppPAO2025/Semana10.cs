@@ -44,3 +44,11 @@ HashSet<string> ambasDosis = new HashSet<string>();
         soloPfizer.ExceptWith(astrazeneca);
         
         Console.WriteLine("Ciudadanos solo con Pfizer: " + soloPfizer.Count);
+
+        // Ciudadanos que solo han recibido AstraZeneca
+        HashSet<string> soloAstrazeneca = new HashSet<string>();
+        soloAstrazeneca.UnionWith(astrazeneca);
+        soloAstrazeneca.ExceptWith(pfizer);
+        
+        Console.WriteLine("Ciudadanos solo con AstraZeneca: " + soloAstrazeneca.Count);
+    }
