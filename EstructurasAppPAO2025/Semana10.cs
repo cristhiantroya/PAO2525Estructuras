@@ -30,4 +30,9 @@ public class vacunas
         noVacunados.ExceptWith(astrazeneca);
         
         Console.WriteLine("Ciudadanos no vacunados: " + noVacunados.Count);
+
+        // Ciudadanos que han recibido ambas dosis
+HashSet<string> ambasDosis = new HashSet<string>();
+        ambasDosis.UnionWith(pfizer);
+        ambasDosis.IntersectWith(astrazeneca);
         
