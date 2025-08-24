@@ -1,6 +1,7 @@
-public class vacunas
+public class Vacunas
 {
     public static void run()
+    {
     // Crear un conjunto de 500 ciudadanos
         HashSet<string> todosCiudadanos = new HashSet<string>();
         for (int i = 1; i <= 500; i++)
@@ -52,3 +53,4 @@ HashSet<string> ambasDosis = new HashSet<string>();
         
         Console.WriteLine("Ciudadanos solo con AstraZeneca: " + soloAstrazeneca.Count);
     }
+}

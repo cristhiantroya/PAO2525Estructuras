@@ -1,22 +1,73 @@
-﻿SistemaAtraccion atraccion = new SistemaAtraccion();
-System.Console.WriteLine("=== SISTEMA DE ASIGNACIÓN DE ASIENTOS ===");
-System.Console.WriteLine("Simulando llegada de 30 visitantes...\n");
+﻿Console.WriteLine("Universidad Estatal Amazónica");
+Console.WriteLine("=============================");
+Console.WriteLine(" Vacunación contra el COVID-19");
 
-for (int i = 1; i <= 30; i++)
-{
-    atraccion.AgregarALaCola($"Visitante-{i}", i);
-}
+Vacunas.run(); 
 
-System.Console.WriteLine("\nEstado inicial:");
-atraccion.MostrarCola();
 
-System.Console.WriteLine("\nIniciando asignación de asientos...");
-atraccion.AsignarAsientos();
 
-System.Console.WriteLine("\nResultado final de asignación:");
-atraccion.MostrarAsientos();
 
-System.Console.WriteLine("\nProceso completado exitosamente");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  SistemaAtraccion atraccion = new SistemaAtraccion();
+//  System.Console.WriteLine("=== SISTEMA DE ASIGNACIÓN DE ASIENTOS ===");
+//  System.Console.WriteLine("Simulando llegada de 30 visitantes...\n");
+
+// for (int i = 1; i <= 30; i++)
+// {
+//      atraccion.AgregarALaCola($"Visitante-{i}", i);
+// }
+
+// System.Console.WriteLine("\nEstado inicial:");
+//  atraccion.MostrarCola();
+
+// System.Console.WriteLine("\nIniciando asignación de asientos...");
+// atraccion.AsignarAsientos();
+
+// System.Console.WriteLine("\nResultado final de asignación:");
+// atraccion.MostrarAsientos();
+
+// System.Console.WriteLine("\nProceso completado exitosamente");
+
 
 
 
