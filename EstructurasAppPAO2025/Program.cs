@@ -1,8 +1,35 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica");
 Console.WriteLine("=============================");
-Console.WriteLine(" Vacunación contra el COVID-19");
+Console.WriteLine(" Traductor Ingles-Español");
 
-Vacunas.run(); 
+
+traductorbasico.run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Vacunas.run(); 
 
 
 
