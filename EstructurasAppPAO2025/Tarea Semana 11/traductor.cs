@@ -72,5 +72,36 @@ public class traductorbasico
         //Separa la frase en palabras
         string[] palabras = frase.Split(' ');
         string fraseTraducida = "";
+        // recorre cada palabra de la frase 
+        foreach (string palabra in palabras)
+        {
+            string palabraLimpia = LimpiarPalabra(palabra);
+            // Verifica si la palabra existe en el diccionario
+            if (diccionario.ContainsKey(palabraLimpia))
+            {
+                // si la palabra existe agrega la traduccion 
+                fraseTraducida += diccionario[palabraLimpia] + " ";
+            }
+            else if (diccionario.ContainsValue(palabraLimpia))
+            {
+                // Buscar la traducción en inglés recorriendo el diccionario para encontrar la clave cuyo valor coincida con la palabra en español
+
+                foreach (var entrada in diccionario)
+                {
+                    if (entrada.Value == palabraLimpia)
+                    {
+                        fraseTraducida += entrada.Key + " ";
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                fraseTraducida += palabra + " ";
+            }
+        }
+        
+        System.Console.WriteLine("Frase traducida: " + fraseTraducida);
+    }
 
     }
