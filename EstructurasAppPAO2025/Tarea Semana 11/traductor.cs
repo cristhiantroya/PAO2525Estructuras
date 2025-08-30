@@ -129,5 +129,19 @@ public class traductorbasico
             System.Console.WriteLine("Error: No puede ingresar palabras vacías.");
             return;
         }
-
+        if (diccionario.ContainsKey(ingles))
+        {
+            System.Console.WriteLine("La palabra en inglés ya existe en el diccionario.");
+            return;
+        }
+        if (diccionario.ContainsValue(español))
+        {
+            System.Console.WriteLine("La palabra en español ya existe en el diccionario.");
+            return;
+        }
+        diccionario.Add(ingles, español);
+        System.Console.WriteLine("¡Palabra agregada correctamente!");
     }
+}
+
+    
