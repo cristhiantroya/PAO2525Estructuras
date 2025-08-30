@@ -26,7 +26,36 @@ public class traductorbasico
         diccionario.Add("point", "punto");
         diccionario.Add("government", "gobierno");
         diccionario.Add("company", "empresa");
-   
-    }
 
-}
+        bool salir = false;
+
+        while (!salir)
+        {
+            // Creamos el menú principal
+            System.Console.WriteLine("==================== MENÚ ====================");
+            System.Console.WriteLine("1. Traducir una frase");
+            System.Console.WriteLine("2. Agregar palabras al diccionario");
+            System.Console.WriteLine("0. Salir");
+            System.Console.Write("Seleccione una opción: ");
+            
+            string opcion = System.Console.ReadLine();
+
+            switch (opcion)
+            {
+     case "1":
+                    TraducirFrase(diccionario);
+                    break;
+                case "2":
+                    AgregarPalabra(diccionario);
+                    break;
+                case "0":
+                    salir = true;
+                    System.Console.WriteLine("¡Hasta luego!");
+                    break;
+                default:
+                    System.Console.WriteLine("Opción no válida. Intente nuevamente.");
+                    break;
+            }
+        }
+    }
+    }
