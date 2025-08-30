@@ -100,8 +100,20 @@ public class traductorbasico
                 fraseTraducida += palabra + " ";
             }
         }
-        
+
         System.Console.WriteLine("Frase traducida: " + fraseTraducida);
+    }
+    /// Método para limpiar una palabra
+    static string LimpiarPalabra(string palabra)
+    {
+        string palabraLimpia = palabra.ToLower();
+        char[] signosPuntuacion = { '.', ',', ';', ':', '!', '?', '"', '\'' };
+        if (signosPuntuacion.Contains(palabraLimpia[palabraLimpia.Length - 1]))
+        {
+            palabraLimpia = palabraLimpia.Substring(0, palabraLimpia.Length - 1);
+        }
+
+        return palabraLimpia;
     }
 
     }
