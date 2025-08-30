@@ -69,5 +69,8 @@ public class traductorbasico
             System.Console.WriteLine("No se ingresó ninguna frase.");
             return;
         }
+        //Separa la frase en palabras
+        string[] palabras = frase.Split(' ');
+        string fraseTraducida = "";
 
     }
