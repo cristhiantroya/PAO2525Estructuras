@@ -115,5 +115,19 @@ public class traductorbasico
 
         return palabraLimpia;
     }
+    // Metodo para agregar palabras nuevas al diccionario
+    static void AgregarPalabra(Dictionary<string, string> diccionario)
+    {
+        System.Console.Write("Ingrese la palabra en inglés: ");
+        string ingles = System.Console.ReadLine().ToLower().Trim();
+
+        System.Console.Write("Ingrese la traducción en español: ");
+        string español = System.Console.ReadLine().ToLower().Trim();
+
+        if (string.IsNullOrEmpty(ingles) || string.IsNullOrEmpty(español))
+        {
+            System.Console.WriteLine("Error: No puede ingresar palabras vacías.");
+            return;
+        }
 
     }
