@@ -37,12 +37,12 @@ public class traductorbasico
             System.Console.WriteLine("2. Agregar palabras al diccionario");
             System.Console.WriteLine("0. Salir");
             System.Console.Write("Seleccione una opción: ");
-            
+
             string opcion = System.Console.ReadLine();
 
             switch (opcion)
             {
-     case "1":
+                case "1":
                     TraducirFrase(diccionario);
                     break;
                 case "2":
@@ -58,4 +58,16 @@ public class traductorbasico
             }
         }
     }
+    //metodo para traducir la frase 
+    static void TraducirFrase(Dictionary<string, string> diccionario)
+    {
+        System.Console.Write("Ingrese la frase a traducir: ");
+        string frase = System.Console.ReadLine();
+
+        if (string.IsNullOrEmpty(frase))
+        {
+            System.Console.WriteLine("No se ingresó ninguna frase.");
+            return;
+        }
+
     }
