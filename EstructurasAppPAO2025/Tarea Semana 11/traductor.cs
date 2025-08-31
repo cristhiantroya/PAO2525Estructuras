@@ -58,6 +58,7 @@ public class traductorbasico
             }
         }
     }
+
     //metodo para traducir la frase 
     static void TraducirFrase(Dictionary<string, string> diccionario)
     {
@@ -70,29 +71,34 @@ public class traductorbasico
             return;
         }
         //Separa la frase en palabras
-        string[] palabras = frase.Split(' ');
+        string[] palabras = frase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         string fraseTraducida = "";
         // recorre cada palabra de la frase 
         foreach (string palabra in palabras)
         {
             string palabraLimpia = LimpiarPalabra(palabra);
             // Verifica si la palabra existe en el diccionario
-            if (diccionario.ContainsKey(palabraLimpia))
+            if (!string.IsNullOrEmpty(palabraLimpia))
             {
-                // si la palabra existe agrega la traduccion 
-                fraseTraducida += diccionario[palabraLimpia] + " ";
-            }
-            else if (diccionario.ContainsValue(palabraLimpia))
-            {
-                // Buscar la traducción en inglés recorriendo el diccionario para encontrar la clave cuyo valor coincida con la palabra en español
-
-                foreach (var entrada in diccionario)
+                if (diccionario.ContainsKey(palabraLimpia))
                 {
-                    if (entrada.Value == palabraLimpia)
+                    fraseTraducida += diccionario[palabraLimpia] + " ";
+                }
+                else if (diccionario.ContainsValue(palabraLimpia))
+                {
+                    // Buscar la traducción en inglés recorriendo el diccionario para encontrar la clave cuyo valor coincida con la palabra en español
+                    foreach (var entrada in diccionario)
                     {
-                        fraseTraducida += entrada.Key + " ";
-                        break;
+                        if (entrada.Value == palabraLimpia)
+                        {
+                            fraseTraducida += entrada.Key + " ";
+                            break;
+                        }
                     }
+                }
+                else
+                {
+                    fraseTraducida += palabra + " ";
                 }
             }
             else
@@ -100,21 +106,31 @@ public class traductorbasico
                 fraseTraducida += palabra + " ";
             }
         }
-
         System.Console.WriteLine("Frase traducida: " + fraseTraducida);
     }
+
     /// Método para limpiar una palabra
     static string LimpiarPalabra(string palabra)
     {
+        if (string.IsNullOrEmpty(palabra))
+            return palabra;
+        
         string palabraLimpia = palabra.ToLower();
-        char[] signosPuntuacion = { '.', ',', ';', ':', '!', '?', '"', '\'' };
-        if (signosPuntuacion.Contains(palabraLimpia[palabraLimpia.Length - 1]))
+        
+        if (palabraLimpia.Length > 1)
         {
-            palabraLimpia = palabraLimpia.Substring(0, palabraLimpia.Length - 1);
+            char[] signosPuntuacion = { '.', ',', ';', ':', '!', '?', '"', '\'' };
+            char ultimoCaracter = palabraLimpia[palabraLimpia.Length - 1];
+
+            if (signosPuntuacion.Contains(ultimoCaracter))
+            {
+                palabraLimpia = palabraLimpia.Substring(0, palabraLimpia.Length - 1);
+            }
         }
 
         return palabraLimpia;
     }
+
     // Metodo para agregar palabras nuevas al diccionario
     static void AgregarPalabra(Dictionary<string, string> diccionario)
     {
