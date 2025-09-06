@@ -128,3 +128,35 @@ static void AgregarLibro(Dictionary<string, string> libros)
             Console.WriteLine("La categoría ya existe.");
         }
     }
+    //función para mostrar categorías registradas 
+    static void MostrarCategorias(HashSet<string> categorias)
+    {
+        if (categorias.Count == 0)
+        {
+            Console.WriteLine("No hay categorías registradas.");
+            return;
+        }
+        
+        Console.WriteLine("\n=== CATEGORÍAS ===");
+        foreach (string categoria in categorias)
+        {
+            Console.WriteLine("- " + categoria);
+        }
+        Console.WriteLine("Total de categorías: " + categorias.Count);
+    }
+    //función para verificar existencia de categoría
+     static void VerificarCategoria(HashSet<string> categorias)
+    {
+        Console.Write("Ingrese la categoría a verificar: ");
+        string categoria = Console.ReadLine();
+        
+        if (categorias.Contains(categoria))
+        {
+            Console.WriteLine("La categoría SÍ existe.");
+        }
+        else
+        {
+            Console.WriteLine("La categoría NO existe.");
+        }
+    }
+}
