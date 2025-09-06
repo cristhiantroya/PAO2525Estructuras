@@ -13,7 +13,7 @@ public class registrolibros
 
         while (continuar)
         {
-            Console.WriteLine("\n=== SISTEMA BIBLIOTECA ===");
+            Console.WriteLine("\n=== Sistema de registro de libros para biblioteca ===");
             Console.WriteLine("1. Agregar libro");
             Console.WriteLine("2. Buscar libro por ISBN");
             Console.WriteLine("3. Mostrar todos los libros");
