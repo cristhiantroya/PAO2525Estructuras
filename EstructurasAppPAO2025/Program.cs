@@ -1,11 +1,8 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica");
 Console.WriteLine("=============================");
-Console.WriteLine(" Traductor Ingles-Español");
 
 
-traductorbasico.run();
-
-
+registrolibros.run();
 
 
 
@@ -29,6 +26,22 @@ traductorbasico.run();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//traductorbasico.run();
 //Vacunas.run(); 
 
 
