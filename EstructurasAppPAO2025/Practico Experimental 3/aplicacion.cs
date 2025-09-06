@@ -82,3 +82,19 @@ static void AgregarLibro(Dictionary<string, string> libros)
             Console.WriteLine("Libro agregado correctamente.");
         }
     }
+
+    //función para buscar libro por ISBN 
+     static void BuscarLibro(Dictionary<string, string> libros)
+    {
+        Console.Write("Ingrese el ISBN a buscar: ");
+        string isbn = Console.ReadLine();
+        
+        if (libros.ContainsKey(isbn))
+        {
+            Console.WriteLine("Libro encontrado: " + libros[isbn]);
+        }
+        else
+        {
+            Console.WriteLine("No se encontró ningún libro con ese ISBN.");
+        }
+    }
