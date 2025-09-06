@@ -7,9 +7,9 @@ public class registrolibros
 
         // Conjunto para las categorias de los libros 
         HashSet<string> categorias = new HashSet<string>();
-     
-     //implementar menú principal del sistema de biblioteca
-      bool continuar = true;
+
+        //implementar menú principal del sistema de biblioteca
+        bool continuar = true;
 
         while (continuar)
         {
@@ -62,4 +62,23 @@ public class registrolibros
             }
 
         }
-}
+    }
+//implementar método AgregarLibro con control de duplicados
+static void AgregarLibro(Dictionary<string, string> libros)
+    {
+        Console.Write("Ingrese el ISBN del libro: ");
+        string isbn = Console.ReadLine();
+        
+        Console.Write("Ingrese el título del libro: ");
+        string titulo = Console.ReadLine();
+        
+        if (libros.ContainsKey(isbn))
+        {
+            Console.WriteLine("¡Error! Ya existe un libro con ese ISBN.");
+        }
+        else
+        {
+            libros.Add(isbn, titulo);
+            Console.WriteLine("Libro agregado correctamente.");
+        }
+    }
