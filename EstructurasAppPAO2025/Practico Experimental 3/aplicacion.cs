@@ -106,4 +106,25 @@ static void AgregarLibro(Dictionary<string, string> libros)
             Console.WriteLine("No hay libros registrados.");
             return;
         }
+         Console.WriteLine("\n=== LIBROS REGISTRADOS ===");
+        foreach (KeyValuePair<string, string> libro in libros)
+        {
+            Console.WriteLine("ISBN: " + libro.Key + " - Título: " + libro.Value);
         }
+        Console.WriteLine("Total de libros: " + libros.Count);
+    }
+    //función para registrar nuevas categorías
+    static void AgregarCategoria(HashSet<string> categorias)
+    {
+        Console.Write("Ingrese la categoría: ");
+        string categoria = Console.ReadLine();
+        
+        if (categorias.Add(categoria))
+        {
+            Console.WriteLine("Categoría agregada correctamente.");
+        }
+        else
+        {
+            Console.WriteLine("La categoría ya existe.");
+        }
+    }
