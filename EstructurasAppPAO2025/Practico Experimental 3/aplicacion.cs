@@ -98,3 +98,12 @@ static void AgregarLibro(Dictionary<string, string> libros)
             Console.WriteLine("No se encontró ningún libro con ese ISBN.");
         }
     }
+    //función para mostrar libros registrados 
+    static void MostrarLibros(Dictionary<string, string> libros)
+    {
+        if (libros.Count == 0)
+        {
+            Console.WriteLine("No hay libros registrados.");
+            return;
+        }
+        }
