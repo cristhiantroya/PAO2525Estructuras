@@ -14,7 +14,7 @@ public class registrolibros
         while (continuar)
         {
             Console.WriteLine("\n=== Sistema de registro de libros para biblioteca ===");
-            Console.WriteLine("1. Agregar libro");
+            Console.WriteLine("1. Agregar un libro");
             Console.WriteLine("2. Buscar libro por ISBN");
             Console.WriteLine("3. Mostrar todos los libros");
             Console.WriteLine("4. Agregar categoría");
@@ -65,23 +65,47 @@ public class registrolibros
     }
 //implementar método AgregarLibro con control de duplicados
 static void AgregarLibro(Dictionary<string, string> libros)
+{
+    Console.Write("Ingrese el ISBN del libro: ");
+    string? isbnInput = Console.ReadLine();
+
+    if (string.IsNullOrWhiteSpace(isbnInput))
     {
-        Console.Write("Ingrese el ISBN del libro: ");
-        string isbn = Console.ReadLine();
-        
-        Console.Write("Ingrese el título del libro: ");
-        string titulo = Console.ReadLine();
-        
-        if (libros.ContainsKey(isbn))
-        {
-            Console.WriteLine("¡Error! Ya existe un libro con ese ISBN.");
-        }
-        else
-        {
-            libros.Add(isbn, titulo);
-            Console.WriteLine("Libro agregado correctamente.");
-        }
+        Console.WriteLine("Error: El ISBN no puede estar vacío.");
+        return;
     }
+
+    // Validar que el ISBN solo contenga números
+    if (!ulong.TryParse(isbnInput, out ulong isbnNumerico))
+    {
+        Console.WriteLine("Error: El ISBN debe contener solo números.");
+        return;
+    }
+
+    string isbn = isbnInput;
+
+    Console.Write("Ingrese el título del libro: ");
+    string? tituloInput = Console.ReadLine();
+
+    if (string.IsNullOrWhiteSpace(tituloInput))
+    {
+        Console.WriteLine("Error: El título no puede estar vacío.");
+        return;
+    }
+
+    string titulo = tituloInput;
+
+    if (libros.ContainsKey(isbn))
+    {
+        Console.WriteLine("¡Error! Ya existe un libro con ese ISBN.");
+    }
+    else
+    {
+        libros.Add(isbn, titulo);
+        Console.WriteLine("Libro agregado correctamente.");
+    }
+}
+
 
     //función para buscar libro por ISBN 
      static void BuscarLibro(Dictionary<string, string> libros)
