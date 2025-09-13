@@ -30,7 +30,7 @@ public class catalogoderevistas
     }
     public static void run()
     {
-        catalogoderevistas catalogo = new catalogoderevistas
+        catalogoderevistas catalogo = new catalogoderevistas();
         //insertamos 10 revistas populares en el catálogo
 
         catalogo.Insertar("National Geographic");
@@ -43,8 +43,18 @@ public class catalogoderevistas
         catalogo.Insertar("Mundo deportivo");
         catalogo.Insertar("Sport Life");
         catalogo.Insertar("The Economist");
+        //implementar menú de opciones para buscar títulos  
          
-
+    bool continuar = true;
+        
+        while (continuar)
+        {
+            System.Console.WriteLine("\n--- Catálogo de Revistas ---");
+            System.Console.WriteLine("1. Buscar título");
+            System.Console.WriteLine("2. Salir");
+            System.Console.Write("Seleccione una opción: ");
+            
+            string opcion = System.Console.ReadLine();
     }
 
 }
