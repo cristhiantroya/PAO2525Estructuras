@@ -16,6 +16,18 @@ public class catalogoderevistas
             cantidad++;
         }
     }  
+    //// Búsqueda ITERATIVA en arreglo
+      public bool BuscarIterativo(string titulo)
+    {
+        for (int i = 0; i < cantidad; i++)
+        {
+            if (revistas[i] == titulo)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public static void run()
     {
 
