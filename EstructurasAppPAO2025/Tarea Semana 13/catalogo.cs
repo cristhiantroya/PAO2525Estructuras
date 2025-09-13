@@ -17,7 +17,7 @@ public class catalogoderevistas
         }
     }  
     // Búsqueda iterativa
-      public bool BuscarIterativo(string titulo)
+      public bool Buscar(string titulo)
     {
         for (int i = 0; i < cantidad; i++)
         {

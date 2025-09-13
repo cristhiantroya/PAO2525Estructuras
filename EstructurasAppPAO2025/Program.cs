@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica");
 Console.WriteLine("=============================");
 
-
+catalogoderevistas.run();
 
 
 
