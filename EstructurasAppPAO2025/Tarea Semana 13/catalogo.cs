@@ -16,7 +16,7 @@ public class catalogoderevistas
             cantidad++;
         }
     }  
-    //// Búsqueda ITERATIVA en arreglo
+    // Búsqueda iterativa
       public bool BuscarIterativo(string titulo)
     {
         for (int i = 0; i < cantidad; i++)
@@ -30,6 +30,20 @@ public class catalogoderevistas
     }
     public static void run()
     {
+        catalogoderevistas catalogo = new catalogoderevistas
+        //insertamos 10 revistas populares en el catálogo
+
+        catalogo.Insertar("National Geographic");
+        catalogo.Insertar("Nature");
+        catalogo.Insertar("Science");
+        catalogo.Insertar("Forbes");
+        catalogo.Insertar("Vogue");
+        catalogo.Insertar("People");
+        catalogo.Insertar("Marca");
+        catalogo.Insertar("Mundo deportivo");
+        catalogo.Insertar("Sport Life");
+        catalogo.Insertar("The Economist");
+         
 
     }
 
