@@ -2,7 +2,41 @@
 Console.WriteLine("=============================");
 
 
-registrolibros.run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//registrolibros.run();
 
 
 
